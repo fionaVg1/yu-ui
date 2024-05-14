@@ -1,18 +1,28 @@
 {
   "name": "@fiona_cai/yu-ui",
-  "version": "1.1.0",  
+  "version": "1.1.0",
   "description": "自定义第三方组件库",
   "main": "dist/index.umd.js",
-  "keywords": ["vue","ui","组件库"],
+  "keywords": [
+    "vue",
+    "ui",
+    "组件库"
+  ],
   "author": "fiona",
-  "files": ["dist","components"],
+  "files": [
+    "dist",
+    "components"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build2":"npm run build:js && npm run build:css",
+    "build2": "npm run build:js & npm run build:css",
     "lint": "vue-cli-service lint",
     "build:js": "webpack --config ./webpack.component.js",
-    "build:css": "npx gulp sass"
+    "build:css": "npx gulp sass",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy":"set NODE_OPTIONS=--openssl-legacy-provider & bash deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -33,6 +43,7 @@
     "sass-loader": "^10.5.2",
     "vue-loader": "^15.11.1",
     "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.9.10",
     "webpack-cli": "^4.10.0"
   },
   "eslintConfig": {
