@@ -1,0 +1,37 @@
+{
+  "id": "4549959",
+  "name": "yu-ui",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4266146",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e70e",
+      "unicode_decimal": 59150
+    },
+    {
+      "icon_id": "4880421",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "10056213",
+      "name": "查询",
+      "font_class": "chaxun",
+      "unicode": "e6f7",
+      "unicode_decimal": 59127
+    },
+    {
+      "icon_id": "23713895",
+      "name": "对钩-粗",
+      "font_class": "duigou-cu",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    }
+  ]
+}
