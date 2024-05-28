@@ -9,6 +9,7 @@ import '../components/css/input.scss';
 import '../components/css/switch.scss';
 import '../components/css/radio.scss';
 import '../components/css/checkbox.scss';
+import '../components/css/form-item.scss';
 import Demo from '../components/lib/demo/index.js';
 import Card from '../components/lib/card/index.js';
 import Button from '../components/lib/button/index.js';
@@ -18,6 +19,9 @@ import Switch from '../components/lib/switch/index.js';
 import Radio from '../components/lib/radio/index.js';
 import RadioGroup from '../components/lib/radio-group/index.js';
 import Checkbox from '../components/lib/checkbox/index.js';
+import CheckboxGroup from '../components/lib/checkbox-group/index.js';
+import Form from '../components/lib/form/index.js';
+import FormItem from '../components/lib/form-item/index.js';
 
 Vue.use(Demo);
 Vue.use(Card);
@@ -28,6 +32,10 @@ Vue.use(Switch);
 Vue.use(Radio);
 Vue.use(RadioGroup);
 Vue.use(Checkbox);
+Vue.use(CheckboxGroup);
+Vue.use(Form);
+Vue.use(FormItem);
+
 Vue.config.productionTip = false;
 Vue.config.debug = true;
 Vue.config.devtools = true;

@@ -13,6 +13,11 @@
     "dist",
     "components"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fionaVg1/yu-ui.git"
+  },
+  "homepage": "https://github.com/fionaVg1/yu-ui",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

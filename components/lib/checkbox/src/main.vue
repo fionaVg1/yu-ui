@@ -1,12 +1,12 @@
 <template>
-  <div class="yu-checkbox" :class="{ 'is-checked': label === value }">
+  <div class="yu-checkbox" :class="{ 'is-checked': isChecked}">
     <span class="yu-checkbox__input">
       <span class="yu-checkbox__inner"></span>
       <input
         type="checkbox"
-        class="yu-checkbox__original"
-        :value="label"
+        class="yu-checkbox__original"        
         :name="name"
+        :value="label"
         v-model="model"
       />
     </span>
@@ -19,6 +19,11 @@
 <script>
 export default {
   name: "YuCheckbox",
+  inject:{
+    CheckboxGroup:{
+      default:''
+    }
+  },
   props: {
     label: {
       type: String,
@@ -36,17 +41,20 @@ export default {
    computed: {
     model: {
       get() {
-        return this.isGroup ? this.RadioGroup.value : this.value;
+        return this.isGroup ? this.CheckboxGroup.value : this.value;
       },
       set(value) {
         this.isGroup
-          ? this.RadioGroup.$emit("input", value)
+          ? this.CheckboxGroup.$emit("input", value)
           : this.$emit("input", value);
       },
     },
     isGroup() {
-      return !!this.RadioGroup;
+      return !!this.CheckboxGroup;
     },
+    isChecked(){
+      return this.isGroup?this.model.includes(this.label):this.model;
+    }
   },
 };
 </script>

@@ -70,7 +70,19 @@
       <yu-radio label="0">男</yu-radio>
       <yu-radio label="1">女</yu-radio>
     </yu-radio-group>
-    <yu-checkbox v-model="active">状态</yu-checkbox>
+    <yu-checkbox-group v-model="hobby">
+      <yu-checkbox label="抽烟"></yu-checkbox>
+      <yu-checkbox label="喝酒"></yu-checkbox>
+      <yu-checkbox label="烫头"></yu-checkbox>
+    </yu-checkbox-group>
+    <yu-form :model="model" label-width="100px">
+      <yu-form-item label="用户名">
+        <yu-input placeholder="请输入用户名" v-model="model.username"></yu-input>
+      </yu-form-item>
+      <yu-form-item label="选择">
+        <yu-switch  v-model="model.active"></yu-switch>
+      </yu-form-item>
+    </yu-form>
   </div>
 </template>
 
@@ -87,6 +99,11 @@ export default {
       inActiveColor: "gray",
       gender: "1",
       active:false,
+      hobby:['抽烟','喝酒','烫头'],
+      model:{
+        username:'',
+        active:false
+      }
     };
   },
   methods: {
